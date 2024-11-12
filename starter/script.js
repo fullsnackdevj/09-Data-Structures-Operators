@@ -12,20 +12,9 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  // openingHours: {
-  //   thu: {
-  //     open: 12,
-  //     close: 22,
-  //   },
-  //   fri: {
-  //     open: 11,
-  //     close: 23,
-  //   },
-  //   sat: {
-  //     open: 0, // Open 24 hours
-  //     close: 24,
-  //   },
-  // },
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 };
 
 // array destructuring.. ' unpacking '
@@ -60,3 +49,10 @@ console.log(element1, element2); // result: Italian Vegetarian
 [element1, element2] = [element2, element1]; // creating a new array with 2 variables inverted , simply re-assigning values of 2 variables so no need for the 'Let'
 
 console.log(element1, element2); // result: Vegetarian Italian
+
+//receive 2 return values from a function
+
+console.log(restaurant.order(2, 0));
+
+const [starter, mainCourse] = restaurant.order(2, 0);
+console.log(starter, mainCourse); // Garlic Bread Pizza
