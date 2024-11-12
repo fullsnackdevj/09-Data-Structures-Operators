@@ -57,7 +57,7 @@ console.log(restaurant.order(2, 0));
 const [starter, mainCourse] = restaurant.order(2, 0);
 console.log(starter, mainCourse); // Garlic Bread Pizza
 
-//working with nested array
+//working with nested array (nested destructuring)
 
 const nested = [2, 4, [5, 6]];
 
@@ -66,3 +66,13 @@ console.log(i, j); // result: [5, 6]
 
 const [k, , [l, m]] = nested;
 console.log(k, l, m); // result: 2 5 6
+
+//default values
+
+const [p, q, r] = [8, 9];
+console.log(p, q, r); // 8 9 undefined
+
+/// setting default values
+
+const [s = 1, t = 1, u = 1] = [8, 9];
+console.log(s, t, u); // 8 9 1
