@@ -49,8 +49,14 @@ console.log(element1, element2); // result: Italian Vegetarian
 
 // switching variables without destructuring
 
-const temp = element1; // create temporary variable and assign to the element1
-element1 = element2; // assign element1 to element2
-element2 = temp; // assign element2 to temp variable, thats where we temporary stored the value of element1
+// const temp = element1; // create temporary variable and assign to the element1
+// element1 = element2; // assign element1 to element2
+// element2 = temp; // assign element2 to temp variable, thats where we temporary stored the value of element1
+
+// console.log(element1, element2); // result: Vegetarian Italian
+
+// switching variables with destructuring
+
+[element1, element2] = [element2, element1]; // creating a new array with 2 variables inverted , simply re-assigning values of 2 variables so no need for the 'Let'
 
 console.log(element1, element2); // result: Vegetarian Italian
