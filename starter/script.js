@@ -56,3 +56,13 @@ console.log(restaurant.order(2, 0));
 
 const [starter, mainCourse] = restaurant.order(2, 0);
 console.log(starter, mainCourse); // Garlic Bread Pizza
+
+//working with nested array
+
+const nested = [2, 4, [5, 6]];
+
+const [i, , j] = nested;
+console.log(i, j); // result: [5, 6]
+
+const [k, , [l, m]] = nested;
+console.log(k, l, m); // result: 2 5 6
