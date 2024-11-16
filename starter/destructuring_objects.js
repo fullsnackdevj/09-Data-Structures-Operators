@@ -38,6 +38,12 @@ const restaurant = {
       `Order Received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time} `
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}.`
+    );
+  },
 }; // result: Order Received! Garlic Bread and Risotto will be delivered to Via del Sole, 21 at 22:30
 
 restaurant.orderDelivery({
@@ -149,6 +155,16 @@ console.log(letters);
 console.log(...str);
 
 // this will not work :
-console.log(`${...str} Schmedtmann`); // Uncaught SyntaxError: Unexpected token '...'
+// console.log(`${...str} Schmedtmann`); // Uncaught SyntaxError: Unexpected token '...'
 
-// Notes: multiple values separated by a comma are usually only expected when we pass arguments into a function, or when we build a new array. 
+// Notes: multiple values separated by a comma are usually only expected when we pass arguments into a function, or when we build a new array.
+
+const ingredients = [
+  prompt("Let's make pasta! Ingredient 1?"),
+  prompt('Ingredient 2?'),
+  prompt('Ingredient 3?'),
+];
+
+console.log(ingredients);
+
+restaurant.orderPasta(...ingredients);
