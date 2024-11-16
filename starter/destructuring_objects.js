@@ -122,3 +122,10 @@ console.log(...newArr2); // unpacking elements inside the 'newArr2' array : 1 2 
 
 const newMenu = [...restaurant.mainMenu, 'Gnocci'];
 console.log(newMenu); // result:  ['Pizza', 'Pasta', 'Risotto', 'Gnocci']
+
+// Important use cases of using spread operator
+/* 
+#1 Creating shallow copies of arrays
+#2 Merge two arrays together */
+
+// ..Copy Array:
