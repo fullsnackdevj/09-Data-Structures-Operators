@@ -141,3 +141,14 @@ console.log(newMenu1);
 //result: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad', 'Pizza', 'Pasta', 'Risotto']
 
 // Iterables: arrays, strings, maps, sets. NOT OBJECTS
+
+// USE IN STRINGS
+const str = 'Jonas';
+const letters = [...str, '', 'S.'];
+console.log(letters);
+console.log(...str);
+
+// this will not work :
+console.log(`${...str} Schmedtmann`); // Uncaught SyntaxError: Unexpected token '...'
+
+// Notes: multiple values separated by a comma are usually only expected when we pass arguments into a function, or when we build a new array. 
