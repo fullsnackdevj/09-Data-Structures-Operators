@@ -128,4 +128,14 @@ console.log(newMenu); // result:  ['Pizza', 'Pasta', 'Risotto', 'Gnocci']
 #1 Creating shallow copies of arrays
 #2 Merge two arrays together */
 
-// ..Copy Array:
+// Creating Shallow Copy Array:
+const mainMenuCopy = [...restaurant.mainMenu];
+console.log(mainMenuCopy);
+
+// Joining to arrays
+
+const newMenu1 = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+console.log(newMenu1);
+
+//result: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad', 'Pizza', 'Pasta', 'Risotto']
