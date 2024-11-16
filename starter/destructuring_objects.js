@@ -159,12 +159,25 @@ console.log(...str);
 
 // Notes: multiple values separated by a comma are usually only expected when we pass arguments into a function, or when we build a new array.
 
-const ingredients = [
-  prompt("Let's make pasta! Ingredient 1?"),
-  prompt('Ingredient 2?'),
-  prompt('Ingredient 3?'),
-];
+// const ingredients = [
+//   prompt("Let's make pasta! Ingredient 1?"),
+//   prompt('Ingredient 2?'),
+//   prompt('Ingredient 3?'),
+// ];
 
-console.log(ingredients);
+// console.log(ingredients);
 
-restaurant.orderPasta(...ingredients);
+// restaurant.orderPasta(...ingredients);
+
+// working spread operator with objects tho 'objects' is not iterables
+
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' }; // basically copying all the properties of the 'restaurant' into this new object.
+
+console.log(newRestaurant);
+
+// creating shallow copy in object
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristorante Roma';
+console.log(restaurantCopy.name); // Ristorante Roma
+console.log(restaurant.name); // Classico Italiano
