@@ -119,3 +119,6 @@ console.log(newArr1, newArr2);
 console.log(...newArr2); // unpacking elements inside the 'newArr2' array : 1 2 7 8 9
 
 // spread operator does is basically take all the values out of this 'arr' array and then write them individually as if we wrote seven, eight nine here manually.
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu); // result:  ['Pizza', 'Pasta', 'Risotto', 'Gnocci']
