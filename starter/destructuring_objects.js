@@ -25,7 +25,38 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
-};
+
+  // passing objects as one argument to a function start
+
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    address,
+  }) {
+    console.log(
+      `Order Received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time} `
+    );
+  },
+}; // result: Order Received! Garlic Bread and Risotto will be delivered to Via del Sole, 21 at 22:30
+
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Via del Sole, 21',
+  mainIndex: 2,
+  starterIndex: 2,
+});
+
+// setting up default values
+
+restaurant.orderDelivery({
+  address: 'Via del Sole, 21',
+  starterIndex: 1,
+}); // result: Order Received! Bruschetta and Pizza will be delivered to Via del Sole, 21 at 20:00
+
+//
+
+// passing objects as one argument to a function ends
 
 // destructuring Objects
 
