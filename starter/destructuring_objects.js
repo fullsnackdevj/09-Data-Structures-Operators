@@ -139,3 +139,5 @@ const newMenu1 = [...restaurant.starterMenu, ...restaurant.mainMenu];
 console.log(newMenu1);
 
 //result: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad', 'Pizza', 'Pasta', 'Risotto']
+
+// Iterables: arrays, strings, maps, sets. NOT OBJECTS
