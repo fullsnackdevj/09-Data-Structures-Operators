@@ -100,3 +100,22 @@ const {
   fri: { open: openH, close: closeH }, // variable 'open' & 'close' can be anything
 } = openingHours;
 console.log(openH, closeH); // result: 11 23
+
+// the spread operator
+
+const arr = [7, 8, 9];
+
+//manual adding elements:
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+//result: [1, 2, 7, 8, 9]
+
+// using spread operator
+// '...' spreading array to its individual elements
+const newArr1 = [1, 2, arr]; // [1, 2, Array(3)] 'were including the entire 'arr' array here..
+const newArr2 = [1, 2, ...arr]; //[1, 2, 7, 8, 9] ' using spread operator ... were taking all out all the elements on the 'arr' array
+console.log(newArr1, newArr2);
+
+console.log(...newArr2); // unpacking elements inside the 'newArr2' array : 1 2 7 8 9
+
+// spread operator does is basically take all the values out of this 'arr' array and then write them individually as if we wrote seven, eight nine here manually.
